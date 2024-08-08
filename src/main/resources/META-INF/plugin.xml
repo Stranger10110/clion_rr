@@ -7,7 +7,6 @@
     <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.cidr.debugger</depends>
 
-
     <actions>
         <action id="ReverseResume"
                 class="me.zerol.rr.ReverseResumeAction" text="Reverse Resume">
@@ -23,10 +22,13 @@
                 text="Reverse Step Out">
         </action>
 
+        <!-- Reference ".../clion-2024.1/lib/app-client.jar!/idea/LangActions.xml" -->
         <group id="ReverseControls">
             <reference id="ReverseStepOut"/>
             <reference id="ReverseStepInto"/>
             <reference id="ReverseStepOver"/>
+            <separator/>
+
             <add-to-group group-id="XDebugger.ToolWindow.TopToolbar" anchor="before" relative-to-action="StepOver"/>
         </group>
 
@@ -35,6 +37,8 @@
             <reference id="ReverseStepInto"/>
             <reference id="ReverseStepOver"/>
             <reference id="ReverseResume"/>
+            <separator/>
+
             <add-to-group group-id="XDebugger.ToolWindow.TopToolbar3" anchor="before" relative-to-action="Resume"/>
         </group>
     </actions>
